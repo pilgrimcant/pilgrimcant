@@ -1,0 +1,26 @@
+#include <stdio.h>
+
+int main()
+{
+	int max_4(int a, int b, int c, int d);
+	int max, a, b, c, d;
+	
+	scanf("%d %d %d %d", &a, &b, &c, &d);
+	
+	max = max_4(a,b,c,d);
+	printf("%d\n", max);
+	
+	return 0;
+} 
+
+int max_4(int a, int b, int c, int d)
+{
+	int m;
+	int max(int a, int b);
+	
+	m = max(a,b);
+	m = max(m,c);
+	m = max(m,d);
+	
+	return(m);
+}
