@@ -1,0 +1,193 @@
+#include <stdio.h>
+
+int main()
+{
+	int n, i; 
+	
+	scanf("%d\n", &n);//有n组数据 
+	
+	for (i = 0; i < n; i++) 
+	{
+	        int a, b, c, d;
+            int f(int a,int b,int c, int d);
+ 
+            scanf ("%d %d %d %d", &a, &b, &c, &d);// 读入4个整数，对这4个整数排序，并输出结果
+	        
+	        int first, second, third, last;
+	
+	        if (a <= b && b <= c && c <= d)//abcd
+	        {
+	        	first = a;
+	        	second = b;
+	        	third = c;
+	        	last = d;
+			}
+	        if (a <= b && b <= d && d <= c)
+	        {
+	        	first = a;
+	        	second = b;
+	        	third = d;
+	        	last = c;
+			}//abdc
+	        if (a <= c && c <= b && b <= d)
+	        {
+	        	first = a;
+	        	second = c;
+	        	third = b;
+	        	last = d;
+			}//acbd
+	        if (a <= c && c <= d && d <= b)
+	        {
+	        	first = a;
+	        	second = c;
+	        	third = d;
+	        	last = b;
+			}//acdb
+	        if (a <= d && d <= c && c <= b)
+	        {
+	        	first = a;
+	        	second = d;
+	        	third = c;
+	        	last = b;
+			}//adcb
+	        if (a <= d && d <= b && b <= c)
+	        {
+	        	first = a;
+	        	second = d;
+	        	third = b;
+	        	last = c;
+			}//adbc
+	        
+	        if (b <= a && b <= c && c <= d)
+	        {
+	        	first = b;
+	        	second = a;
+	        	third = c;
+	        	last = d;
+			}//bacd
+	        if (b <= a && b <= d && d <= c)
+	        {
+	        	first = b;
+	        	second = a;
+	        	third = d;
+	        	last = c;
+			}//badc
+	        if (b <= c && c <= a && a <= d)
+	        {
+	        	first = b;
+	        	second = c;
+	        	third = a;
+	        	last = d;
+			}//bcad
+	        if (b <= c && c <= d && d <= a)
+	        {
+	        	first = b;
+	        	second = c;
+	        	third = d;
+	        	last = a;
+			}//bcda
+	        if (b <= d && d <= c && c <= a)
+	        {
+	        	first = b;
+	        	second = d;
+	        	third = c;
+	        	last = a;
+			}//bdca
+	        if (b <= d && d <= a && a <= c)
+	        {
+	        	first = b;
+	        	second = d;
+	        	third = a;
+	        	last = c;
+			}//bdac
+	        
+	        if (c <= b && b <= a && a <= d)
+	        {
+	        	first = c;
+	        	second = b;
+	        	third = a;
+	        	last = d;
+			}//cbad
+	        if (c <= b && b <= a && d <= a)
+	        {
+	        	first = c;
+	        	second = b;
+	        	third = d;
+	        	last = a;
+			}//cbda
+	        if (c <= a && a <= b && b <= d)
+	        {
+	        	first = c;
+	        	second = a;
+	        	third = b;
+	        	last = d;
+			}//cabd
+	        if (c <= a && a <= d && d <= b)
+	        {
+	        	first = c;
+	        	second = a;
+	        	third = d;
+	        	last = b;
+			}//cadb
+	        if (c <= d && d <= a && a <= b)
+	        {
+	        	first = c;
+	        	second = d;
+	        	third = a;
+	        	last = b;
+			}//cdab
+	        if (c <= d && d <= b && b <= a)
+	        {
+	        	first = c;
+	        	second = d;
+	        	third = b;
+	        	last = a;
+			}//cdba
+	        
+	        if (d <= b && b <= c && c <= a)
+	        {
+	        	first = d;
+	        	second = b;
+	        	third = c;
+	        	last = a;
+			}//dbca
+	        if (d <= b && b <= a && a <= c)
+	        {
+	        	first = d;
+	        	second = b;
+	        	third = a;
+	        	last = c;
+			}//dbac
+	        if (d <= c && c <= b && b <= a)
+	        {
+	        	first = d;
+	        	second = c;
+	        	third = b;
+	        	last = a;
+			}//dcba
+	        if (d <= c && c <= a && a <= b)
+	        {
+	        	first = d;
+	        	second = c;
+	        	third = a;
+	        	last = b;
+			}//dcab
+	        if (d <= a && a <= c && c <= b)
+	        {
+	        	first = d;
+	        	second = a;
+	        	third = c;
+	        	last = b;
+			}//dacb
+	        if (d <= a && a <= b && b <= c)//dabc
+	        {
+	        	first = d;
+	        	second = a;
+	        	third = b;
+	        	last = c;
+			}
+       
+       printf("%d %d %d %d\n", first, second, third, last);// 请将排序代码写在这里，不能使用循环语句
+    }
+	return 0;
+}
