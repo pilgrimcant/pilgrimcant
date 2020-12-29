@@ -1,0 +1,17 @@
+#include <stdio.h>
+
+int main()
+{
+	int 长度, 宽度, 高度, 体积; 
+	printf("长度：");
+	scanf("%d",&长度); 
+	printf("宽度：");
+	scanf("%d",&宽度); 
+	printf("高度：");
+	scanf("%d",&高度);
+	体积=长度*宽度*高度;
+	
+	printf("体积：%d\n",体积);
+	
+	return 0; 
+ } 
