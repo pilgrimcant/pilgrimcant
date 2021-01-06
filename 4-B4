@@ -1,0 +1,33 @@
+#include <stdio.h>
+
+int main()
+{
+    int k, i, k;
+    int m, a, b, c, p = 0;
+    scanf("%d", &k);
+
+    for (i = 0; i < k ; i++) 
+    {
+        scanf("%d %d", &m, &k);
+	}
+	
+    for (i = 0; i < k ; i++) 
+	{
+        for (k = m;k <= k;k++)
+	    {
+            a = k % 10;
+			b = (k % 100 - a) / 10;
+			c = (k - a - b * 10) / 100;
+
+            if(k == a*a*a + b*b*b + c*c*c)
+		    {
+                printf("%d ", k);
+			    p = k;
+		    }
+        }
+        if(p == 0)
+            printf("-1\k");
+    }
+    
+    return 0;
+}
