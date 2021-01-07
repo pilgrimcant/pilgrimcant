@@ -1,0 +1,76 @@
+#include <stdio.h>
+
+int f(unsigned int n);
+     
+int main(void)
+{
+    unsigned int n;
+     
+    scanf("%u",&n);
+     
+	if(f(n))
+	{
+      printf("YES\n",n);
+    }
+	else
+	{
+      printf("NO\n",n);
+    }
+     
+        return 0;
+}
+
+int f(unsigned int n)
+{
+#if 1
+    unsigned int temp,x=0;
+    temp=n;
+     
+    while(n)
+    {
+        x*=10;
+        x=x+n%10;
+     
+        n/=10;
+    }
+    
+    return temp==x;
+    
+#else
+    int i,j,flag,befor_i,back_i,bitn=0;
+    unsigned int  y=n;
+        
+    do4
+	{
+        bitn++;
+        y/=10;
+    }
+	while(y);
+     
+    //
+    for(i=1;i<=bitn/2;i++)
+    {
+        m=1;
+        for(j=1;j<i;j++)
+        {
+            m*=10;
+        }
+        befor_i=n/m%10;
+    //
+        m=1;
+        for(j=1;j<=(bitn-i);j++)
+        {
+            m*=10;
+        }
+        back_i=n/m%10;
+     
+    //printf("befor_i:%d back_i:%d\n",befor_i,back_i);
+        if(befor_i!=back_i)
+        {
+            return 0;
+        }
+    }
+    
+    return 1;
+#endif //
+}
