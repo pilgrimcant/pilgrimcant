@@ -1,0 +1,31 @@
+#include<stdio.h>
+#include<math.h>
+
+int main()
+{
+	int n, i, k;
+	float m;
+	int a[n];
+	
+	scanf("%d", &n);
+	
+	for(i=0;i<n;i++)
+	  scanf("%d", &a[i]);
+	  
+	for(i=0;i<n;i++)
+	{
+		k =a[i];
+		
+	    if(k >= 0)
+		{
+		  	m = sqrt(k);
+	        printf("%.2f\n", m);
+		}
+		else
+	    printf("ERROR\n");
+		    
+		        
+	}
+	
+	return 0;
+}
